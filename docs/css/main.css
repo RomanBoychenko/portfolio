@@ -93,9 +93,16 @@ button {
   box-shadow: 0px 8px 20px 0px rgba(122, 116, 89, 0.35);
 }
 .button:hover {
-  background-color: #e7c013;
+  background-color: #ffd200;
+}
+.button:active {
+  background-color: #e1bc10;
+}
+.button:focus {
+  border: 1px dotted red;
 }
 .button-contacts {
+  color: #464646;
   margin-left: 20px;
   font-size: 22px;
   font-weight: 700;
@@ -106,8 +113,15 @@ button {
   box-shadow: 0px 8px 20px 0px rgba(122, 116, 89, 0.35);
 }
 .button-contacts:hover {
-  border: 4px solid #000;
-  background-color: #ebe7e7;
+  border: 4px solid #797979;
+  color: #797979;
+}
+.button-contacts:active {
+  color: #181818;
+  border: 4px solid #181818;
+}
+.button-contacts:focus {
+  border: 1px dotted red;
 }
 .title-medium {
   font-size: 40px;
@@ -148,6 +162,9 @@ button {
 .nav-link:last-child {
   margin-right: 0;
 }
+.nav-link:focus {
+  border: 1px dotted red;
+}
 .nav-link:after {
   content: "";
   position: absolute;
@@ -168,19 +185,25 @@ button {
 }
 .nav-icon {
   display: block;
-  width: 30px;
-  height: 30px;
   margin-right: 20px;
-  vertical-align: bottom;
 }
 .nav-icon:last-child {
   margin-right: 0;
 }
-.nav-icon:hover {
-  opacity: 0.7;
+.nav-icon:focus {
+  border: 1px dotted red;
 }
-.nav-icon img {
-  height: 100%;
+.color-linkedin:hover,
+.color-linkedin:active {
+  color: #0077b5;
+}
+.color-github:hover,
+.color-github:active {
+  color: #6cc644;
+}
+.color_vk:hover,
+.color_vk:active {
+  color: #4d76a1;
 }
 .header-container {
   display: flex;
@@ -246,6 +269,9 @@ button {
 .icons-connect-icon {
   margin-right: 30px;
 }
+.icons-connect-icon:focus {
+  border: 1px dotted red;
+}
 .color-git {
   color: #000;
   transition: color 0.2s ease-in;
@@ -282,4 +308,12 @@ button {
 }
 .mail-connect {
   text-decoration: underline;
+}
+.mail-connect:hover {
+  text-decoration: underline;
+  color: #00b7ff;
+}
+.mail-connect:active {
+  text-decoration: underline;
+  color: #f64343;
 }
