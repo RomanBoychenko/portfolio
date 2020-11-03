@@ -7,6 +7,7 @@
     background-size: auto;
     background-position: center;
     background-repeat: repeat-y;
+    overflow: hidden;
 }
 
 .header-nav-wrapper {
@@ -19,7 +20,7 @@
 }
 .header-logo {
     font-size: 42px;      
-    font-weight: 700;
+    font-weight: 800;
     &:hover {
         opacity: 0.8;
     }
@@ -32,65 +33,64 @@
     margin-right: 80px;
     font-size: 20px;
     font-weight: 700;
-
-    position: relative;
-    z-index: 2; 
     
     &:last-child {
         margin-right: 0;
     }
 
     &:focus {
-        border: 1px dotted red;
+        border: 1px dotted var(--red);
     }
 }
 
-.nav-link:after {
-    content:"";
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    width: 0;
-    height: 5px;
-    background-color: #fbdc4d;
-    border-radius: 2px;
-    transition: .5s;
-    z-index: -1;
-}
-.nav-link:hover:after {
-    width: 100%;
-}
 
 .header-nav-icons {
     display: flex;
 
 }
 .nav-icon {
-    display: block;
+    width: 20px;
+
+    display: inline-block;
     margin-right: 20px;
 
     &:last-child {
         margin-right: 0;
     }
     &:focus {
-        border: 1px dotted red;
+        border: 1px dotted var(--red);
     }
 }
-.color-linkedin {
+.color-linkedin svg {
     &:hover, &:active {
-        color: #0077b5;
+        fill: #0077b5;
     }
 }
-.color-github {
+.color-github svg{
     &:hover, &:active {
-        color: #6cc644;
+        fill: #6cc644;
     }
 }
-.color_vk {
+.color_vk svg{
     &:hover, &:active {
-        color: #4d76a1;
+        fill: #4d76a1;
     }
 }
+// .color-linkedin {
+//     &:hover, &:active {
+//         color: #0077b5;
+//     }
+// }
+// .color-github {
+//     &:hover, &:active {
+//         color: #6cc644;
+//     }
+// }
+// .color_vk {
+//     &:hover, &:active {
+//         color: #4d76a1;
+//     }
+// }
 
 .header-container {
     display: flex;
@@ -112,20 +112,21 @@
     width: 100%;
     height: 100%;
     top: 30%;
-    left: 45%;
+    left: 30%;
     background-image: linear-gradient( 90deg, rgb(244, 248, 249) 0%, rgba(244,248,249,0) 100%);
     opacity: 0.502;
     z-index: -1;      
 }
 
 .title-mame {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-size: 90px;
     line-height: 1;
+    font-weight: 800;
 }
 
 .header-content-text {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     line-height: 1.5;
     font-weight: 500;
 }

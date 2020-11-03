@@ -1,3 +1,13 @@
+:root{
+    --blue: rgb(3, 155, 229);
+    --red: rgb(234, 115, 109);
+    --line: rgb(251, 220, 77);
+    --button: rgb(251, 220, 77);
+    --buttonHover: rgb(255, 210, 0);
+    --buttonActive: rgb(225, 188, 16);
+    
+}
+// color: var(--blue);
 * {
     box-sizing: border-box;
 }
@@ -11,7 +21,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: 'MPLUS 1p', sans-serif;
     font-size: 24px;
     color: #000;
 }
@@ -43,7 +53,7 @@ img {
     max-width: 100%;
     display: block;
     height: auto;
-    vertical-align: bottom;
+    // vertical-align: bottom;
 }
 
 button,
@@ -83,7 +93,7 @@ button {
     left: -5px;
     right: -5px;
     height: 7px;
-    background-color: #fbdc4d;
+    background-color: var(--line);
     border-radius: 5px;
     z-index: -1;
 }
@@ -91,39 +101,77 @@ button {
 .title-mame .line-bottom:after {
     bottom: 25px;
 }
+.animate-border {
+    position: relative;
+    width: fit-content;
+    z-index: 2; 
+
+    &:before,
+    &:after {
+        content:"";
+        position: absolute;
+        bottom: 3px;
+        width: 0;
+        height: 4px;
+        background-color: var(--line);
+        border-radius: 2px;
+        transition: .5s;
+        z-index: -1;
+    }
+
+    &:before {
+        left: 50%;
+    }
+    &:after {
+        right: 50%;
+    }
+}
+
+
+.animate-border:hover:before,
+.animate-border:hover:after {
+    width: 55%;
+}
 
 .button {
-    background-color:  #fbdc4d; 
+    display: inline-block;
+    background-color:  var(--button); 
     font-size: 22px;
     font-weight: 700;
-    padding: 15px 40px;
+    height: 64px;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 64px;
     border-radius: 64px;
     border: none;
-    cursor: pointer;
     transition: background-color 0.2s ease-in;
     box-shadow: 0px 8px 20px 0px rgba(122, 116, 89, 0.35);
 
     &:hover {
-        background-color:  #ffd200;
+        background-color:  var(--buttonHover);
     }
     &:active {
-        background-color: #e1bc10;
+        background-color: var(--buttonActive);
     }
     &:focus {
-        border: 1px dotted red;
+        border: 1px dotted var(--red);
     }
 }
 
 .button-contacts {
+    display: inline-block;
     color: #464646;
     margin-left: 20px;
     font-size: 22px;
     font-weight: 700;
-    padding: 11px 40px;
+    height: 64px;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 56px;
     border-radius: 56px;
-    cursor: pointer;
     border: 4px solid #464646;
     box-shadow: 0px 8px 20px 0px rgba(122, 116, 89, 0.35);
+    transition: color 0.2s ease-in, border 0.2s;
 
     &:hover {
         border: 4px solid #797979;

@@ -1,3 +1,11 @@
+:root {
+  --blue: #039be5;
+  --red: #ea736d;
+  --line: #fbdc4d;
+  --button: #fbdc4d;
+  --buttonHover: #ffd200;
+  --buttonActive: #e1bc10;
+}
 * {
   box-sizing: border-box;
 }
@@ -10,7 +18,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: 'M PLUS 1p', sans-serif;
+  font-family: 'MPLUS 1p', sans-serif;
   font-size: 24px;
   color: #000;
 }
@@ -38,7 +46,6 @@ img {
   max-width: 100%;
   display: block;
   height: auto;
-  vertical-align: bottom;
 }
 button,
 input {
@@ -74,43 +81,77 @@ button {
   left: -5px;
   right: -5px;
   height: 7px;
-  background-color: #fbdc4d;
+  background-color: var(--line);
   border-radius: 5px;
   z-index: -1;
 }
 .title-mame .line-bottom:after {
   bottom: 25px;
 }
+.animate-border {
+  position: relative;
+  width: fit-content;
+  z-index: 2;
+}
+.animate-border:before,
+.animate-border:after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  width: 0;
+  height: 4px;
+  background-color: var(--line);
+  border-radius: 2px;
+  transition: .5s;
+  z-index: -1;
+}
+.animate-border:before {
+  left: 50%;
+}
+.animate-border:after {
+  right: 50%;
+}
+.animate-border:hover:before,
+.animate-border:hover:after {
+  width: 55%;
+}
 .button {
-  background-color: #fbdc4d;
+  display: inline-block;
+  background-color: var(--button);
   font-size: 22px;
   font-weight: 700;
-  padding: 15px 40px;
+  height: 64px;
+  padding-left: 40px;
+  padding-right: 40px;
+  line-height: 64px;
   border-radius: 64px;
   border: none;
-  cursor: pointer;
   transition: background-color 0.2s ease-in;
   box-shadow: 0px 8px 20px 0px rgba(122, 116, 89, 0.35);
 }
 .button:hover {
-  background-color: #ffd200;
+  background-color: var(--buttonHover);
 }
 .button:active {
-  background-color: #e1bc10;
+  background-color: var(--buttonActive);
 }
 .button:focus {
-  border: 1px dotted red;
+  border: 1px dotted var(--red);
 }
 .button-contacts {
+  display: inline-block;
   color: #464646;
   margin-left: 20px;
   font-size: 22px;
   font-weight: 700;
-  padding: 11px 40px;
+  height: 64px;
+  padding-left: 40px;
+  padding-right: 40px;
+  line-height: 56px;
   border-radius: 56px;
-  cursor: pointer;
   border: 4px solid #464646;
   box-shadow: 0px 8px 20px 0px rgba(122, 116, 89, 0.35);
+  transition: color 0.2s ease-in, border 0.2s;
 }
 .button-contacts:hover {
   border: 4px solid #797979;
@@ -136,6 +177,7 @@ button {
   background-size: auto;
   background-position: center;
   background-repeat: repeat-y;
+  overflow: hidden;
 }
 .header-nav-wrapper {
   margin: 0 auto;
@@ -147,7 +189,7 @@ button {
 }
 .header-logo {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 800;
 }
 .header-logo:hover {
   opacity: 0.8;
@@ -156,54 +198,38 @@ button {
   margin-right: 80px;
   font-size: 20px;
   font-weight: 700;
-  position: relative;
-  z-index: 2;
 }
 .nav-link:last-child {
   margin-right: 0;
 }
 .nav-link:focus {
-  border: 1px dotted red;
-}
-.nav-link:after {
-  content: "";
-  position: absolute;
-  bottom: 3px;
-  left: 0;
-  width: 0;
-  height: 5px;
-  background-color: #fbdc4d;
-  border-radius: 2px;
-  transition: .5s;
-  z-index: -1;
-}
-.nav-link:hover:after {
-  width: 100%;
+  border: 1px dotted var(--red);
 }
 .header-nav-icons {
   display: flex;
 }
 .nav-icon {
-  display: block;
+  width: 20px;
+  display: inline-block;
   margin-right: 20px;
 }
 .nav-icon:last-child {
   margin-right: 0;
 }
 .nav-icon:focus {
-  border: 1px dotted red;
+  border: 1px dotted var(--red);
 }
-.color-linkedin:hover,
-.color-linkedin:active {
-  color: #0077b5;
+.color-linkedin svg:hover,
+.color-linkedin svg:active {
+  fill: #0077b5;
 }
-.color-github:hover,
-.color-github:active {
-  color: #6cc644;
+.color-github svg:hover,
+.color-github svg:active {
+  fill: #6cc644;
 }
-.color_vk:hover,
-.color_vk:active {
-  color: #4d76a1;
+.color_vk svg:hover,
+.color_vk svg:active {
+  fill: #4d76a1;
 }
 .header-container {
   display: flex;
@@ -225,18 +251,19 @@ button {
   width: 100%;
   height: 100%;
   top: 30%;
-  left: 45%;
+  left: 30%;
   background-image: linear-gradient(90deg, #f4f8f9 0%, rgba(244, 248, 249, 0) 100%);
   opacity: 0.502;
   z-index: -1;
 }
 .title-mame {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-size: 90px;
   line-height: 1;
+  font-weight: 800;
 }
 .header-content-text {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   line-height: 1.5;
   font-weight: 500;
 }
