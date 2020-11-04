@@ -1,6 +1,7 @@
 :root {
   --blue: #039be5;
   --red: #ea736d;
+  --basic: #fbdc4d;
   --line: #fbdc4d;
   --button: #fbdc4d;
   --buttonHover: #ffd200;
@@ -18,7 +19,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: 'MPLUS 1p', sans-serif;
+  font-family: 'M PLUS 1p';
   font-size: 24px;
   color: #000;
 }
@@ -42,10 +43,24 @@ p {
   padding: 0;
   margin: 0;
 }
+p::selection {
+  background-color: var(--basic);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+}
 img {
   max-width: 100%;
   display: block;
   height: auto;
+}
+svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 button,
 input {
@@ -85,8 +100,11 @@ button {
   border-radius: 5px;
   z-index: -1;
 }
-.title-mame .line-bottom:after {
+.title-name .line-bottom:after {
   bottom: 25px;
+}
+.title-main:after {
+  bottom: 20px;
 }
 .animate-border {
   position: relative;
@@ -162,10 +180,15 @@ button {
   border: 4px solid #181818;
 }
 .button-contacts:focus {
-  border: 1px dotted red;
+  border: 1px dotted var(--red);
 }
 .title-medium {
   font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 1;
+}
+.title-main {
+  font-size: 64px;
   font-weight: 800;
   letter-spacing: 1;
 }
@@ -209,7 +232,6 @@ button {
   display: flex;
 }
 .nav-icon {
-  width: 20px;
   display: inline-block;
   margin-right: 20px;
 }
@@ -218,6 +240,9 @@ button {
 }
 .nav-icon:focus {
   border: 1px dotted var(--red);
+}
+.nav-icon svg {
+  width: 25px;
 }
 .color-linkedin svg:hover,
 .color-linkedin svg:active {
@@ -256,7 +281,7 @@ button {
   opacity: 0.502;
   z-index: -1;
 }
-.title-mame {
+.title-name {
   margin-bottom: 25px;
   font-size: 90px;
   line-height: 1;
@@ -266,6 +291,7 @@ button {
   margin-bottom: 40px;
   line-height: 1.5;
   font-weight: 500;
+  color: #393f47;
 }
 .header-content-buttons {
   position: relative;
@@ -276,6 +302,7 @@ button {
 }
 .header-content-wrapper {
   display: flex;
+  padding: 50px 0px 240px 0px;
 }
 .header-content-skills {
   margin-right: 180px;
@@ -343,4 +370,79 @@ button {
 .mail-connect:active {
   text-decoration: underline;
   color: #f64343;
+}
+.portfolio {
+  padding: 120px 0;
+  background-color: #f4f8f9;
+}
+.portfolio-title-main {
+  display: inline-block;
+  margin-bottom: 50px;
+}
+.portfolio-title-main .title-main {
+  display: inline-block;
+}
+.portfolio-progects {
+  margin-bottom: 45px;
+}
+.progect-type {
+  margin-right: 80px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #8fa5ae;
+  font-family: 'MPLUS 1p', sans-serif;
+  border: none;
+  background-color: #f4f8f9;
+}
+.progect-type:hover,
+.progect-type:active {
+  color: var(--red);
+}
+.progect-type:last-child {
+  margin-right: 0;
+}
+.chosen {
+  color: #000000;
+}
+.chosen:hover,
+.chosen:active {
+  color: #000;
+}
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+.projects-wrapper:last-child {
+  margin-bottom: 0;
+}
+.progect {
+  display: inline-block;
+}
+.big-progect-img {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.big-project-title {
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.big-project-description {
+  font-size: 22px;
+}
+.small-progect-img {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+.small-project-title {
+  margin-bottom: 5px;
+  font-size: 26px;
+  font-weight: 700;
+}
+.small-project-description {
+  font-size: 20px;
+  font-weight: 300;
 }

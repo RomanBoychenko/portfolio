@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="fonts/mplus1p/mplus1p.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -55,7 +56,7 @@
                     <img src="img/my-foto.jpg" alt="my-foto">
                 </div>
                 <div class="header-content">
-                    <h1 class="title-mame">
+                    <h1 class="title-name">
                         <span class="line-bottom">Вероника</span>
                         <span class="line-bottom">Иванова</span>
                     </h1>
@@ -92,7 +93,7 @@
                             <li>с Bootstrap и без него.</li>
                         </ul>
                         <div class="header-content-buttons">
-                            <a href="#" class="button">Смотреть работы</a>
+                            <a href="#portfolio" class="button">Смотреть работы</a>
                         </div> 
                 </div>
                 <!-- /header-content-skills -->
@@ -126,6 +127,104 @@
             </div>
         </div>
 
-    </header>  
+    </header>
+    <main>
+        <div id="portfolio" class="portfolio">
+            <div class="container">
+
+                <a href="#" class="portfolio-title-main">
+                    <h2 class="title-main line-bottom">Портфолио</h2>
+                </a>
+
+                <div class="portfolio-progects">
+                    <button class="chosen progect-type">Все работы</button>
+                    <button class="progect-type">Bootstrap</button>
+                    <button class="progect-type">WordPress</button>
+                    <button class="progect-type">Frontend</button>
+                </div>
+                <!-- projects-container-->
+                <div class="projects-container">
+
+                    <!-- big-projects-wrapper -->
+                    <div class="projects-wrapper">
+
+                        <div class="project">
+                            <a href="#" class="big-progect-img">
+                                <img src="img/portfolio-projects/forest-travel.jpg" alt="forest-travel">
+                            </a>
+                            <a href="#">
+                                <h4 class="big-project-title">Верстка "Форест тревел"</h4>
+                            </a>
+                            <p class="big-project-description">
+                                Верстка многостраничного сайта. 
+                            </p>
+                        </div>
+
+                        <div class="project">
+                            <a href="#" class="big-progect-img">
+                                <img src="img/portfolio-projects/dream.jpg" alt="dream">
+                            </a> 
+                            <a href="#">
+                                <h4 class="big-project-title">Сайт для коворкинга "Мечта"</h4>
+                            </a>                     
+                            <p class="big-project-description">
+                                Верстка лендинга. 
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- / big-projects-wrapper -->
+
+                    <!-- small-project-wrapper -->
+                    <div class="projects-wrapper">
+
+                        <div class="project">
+                            <a href="#" class="small-progect-img">
+                                <img src="img/portfolio-projects/madcap.jpg" 
+                                alt="madcap">
+                            </a>
+                            <a href="#">
+                                <h4 class="small-project-title">Верстка "Мир Авто"</h4>
+                            </a>
+                            <p class="small-project-description">
+                                Верстка многостраничного сайта. 
+                            </p>
+                        </div>
+                        <div class="small-project">
+                            <a href="#" class="small-progect-img">
+                                <img src="img/portfolio-projects/no.jpg" 
+                                alt="Ne">
+                            </a>
+                            <a href="#">
+                                <h4 class="small-project-title">Верстка "Мир Авто"</h4>
+                            </a>
+                            <p class="small-project-description">
+                                Верстка многостраничного сайта. 
+                            </p>
+                        </div>
+                        <div class="small-project">
+                            <a href="#" class="small-progect-img">
+                                <img src="img/portfolio-projects/lemon.jpg" 
+                                alt="Lemons">
+                            </a>
+                            <a href="#">
+                                <h4 class="small-project-title">Верстка "Мир Авто"</h4>
+                            </a>
+                            <p class="small-project-description">
+                                Верстка многостраничного сайта. 
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- / small-project-wrapper -->
+
+               </div>
+                <!-- projects-wrapper -->
+            </div>
+        </div>
+        <div class="work">
+
+        </div>
+    </main>  
 </body>
 </html>
