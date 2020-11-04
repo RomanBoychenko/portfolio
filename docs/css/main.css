@@ -408,19 +408,15 @@ button {
 .chosen:active {
   color: #000;
 }
-.projects-wrapper {
+.projects-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.project {
   margin-bottom: 65px;
 }
-.projects-wrapper:last-child {
-  margin-bottom: 0;
-}
-.progect {
-  display: inline-block;
-}
-.big-progect-img {
+.big-project-img {
   display: inline-block;
   margin-bottom: 30px;
 }
@@ -432,7 +428,7 @@ button {
 .big-project-description {
   font-size: 22px;
 }
-.small-progect-img {
+.small-project-img {
   display: inline-block;
   margin-bottom: 30px;
   font-weight: 300;

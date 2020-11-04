@@ -137,94 +137,84 @@
                 </a>
 
                 <div class="portfolio-progects">
-                    <button class="chosen progect-type">Все работы</button>
-                    <button class="progect-type">Bootstrap</button>
-                    <button class="progect-type">WordPress</button>
-                    <button class="progect-type">Frontend</button>
+                    <button class="chosen progect-type control-active" data-filter="all">Все работы</button>
+                    <button class="progect-type" data-filter=".bootstrap">Bootstrap</button>
+                    <button class="progect-type" data-filter=".wordpress">WordPress</button>
+                    <button class="progect-type" data-filter=".frontend">Frontend</button>
                 </div>
                 <!-- projects-container-->
-                <div class="projects-container">
+                <div id="projects-container" class="projects-container">
 
-                    <!-- big-projects-wrapper -->
-                    <div class="projects-wrapper">
-
-                        <div class="project">
-                            <a href="#" class="big-progect-img">
+                    <div class="project mix bootstrap">
+                        <a href="#" class="big-project-img">
                                 <img src="img/portfolio-projects/forest-travel.jpg" alt="forest-travel">
-                            </a>
-                            <a href="#">
-                                <h4 class="big-project-title">Верстка "Форест тревел"</h4>
-                            </a>
-                            <p class="big-project-description">
-                                Верстка многостраничного сайта. 
-                            </p>
-                        </div>
+                        </a>
+                        <a href="#">
+                            <h4 class="big-project-title">Верстка "Форест тревел"</h4>
+                        </a>
+                        <p class="big-project-description">
+                            Верстка многостраничного сайта. 
+                        </p>
+                    </div>
 
-                        <div class="project">
-                            <a href="#" class="big-progect-img">
-                                <img src="img/portfolio-projects/dream.jpg" alt="dream">
-                            </a> 
-                            <a href="#">
-                                <h4 class="big-project-title">Сайт для коворкинга "Мечта"</h4>
+                    <div class="project mix bootstrap wordpress">
+                        <a href="#" class="big-project-img">
+                            <img src="img/portfolio-projects/dream.jpg" alt="dream">
+                        </a> 
+                        <a href="#">
+                            <h4 class="big-project-title">Сайт для коворкинга "Мечта"</h4>
                             </a>                     
-                            <p class="big-project-description">
-                                Верстка лендинга. 
-                            </p>
-                        </div>
-
+                        <p class="big-project-description">
+                            Верстка лендинга. 
+                        </p>
                     </div>
-                    <!-- / big-projects-wrapper -->
-
-                    <!-- small-project-wrapper -->
-                    <div class="projects-wrapper">
-
-                        <div class="project">
-                            <a href="#" class="small-progect-img">
-                                <img src="img/portfolio-projects/madcap.jpg" 
-                                alt="madcap">
-                            </a>
-                            <a href="#">
-                                <h4 class="small-project-title">Верстка "Мир Авто"</h4>
-                            </a>
-                            <p class="small-project-description">
-                                Верстка многостраничного сайта. 
-                            </p>
-                        </div>
-                        <div class="small-project">
-                            <a href="#" class="small-progect-img">
-                                <img src="img/portfolio-projects/no.jpg" 
-                                alt="Ne">
-                            </a>
-                            <a href="#">
-                                <h4 class="small-project-title">Верстка "Мир Авто"</h4>
-                            </a>
-                            <p class="small-project-description">
-                                Верстка многостраничного сайта. 
-                            </p>
-                        </div>
-                        <div class="small-project">
-                            <a href="#" class="small-progect-img">
-                                <img src="img/portfolio-projects/lemon.jpg" 
-                                alt="Lemons">
-                            </a>
-                            <a href="#">
-                                <h4 class="small-project-title">Верстка "Мир Авто"</h4>
-                            </a>
-                            <p class="small-project-description">
-                                Верстка многостраничного сайта. 
-                            </p>
-                        </div>
-
+                    <div class="project mix wordpress">
+                        <a href="#" class="small-project-img">
+                            <img src="img/portfolio-projects/madcap.jpg" 
+                            alt="madcap">
+                        </a>
+                        <a href="#">
+                            <h4 class="small-project-title">Верстка "Мир Авто"</h4>
+                        </a>
+                        <p class="small-project-description">
+                            Верстка многостраничного сайта. 
+                        </p>
                     </div>
-                    <!-- / small-project-wrapper -->
+                    <div class="project mix bootstrap frontend">
+                        <a href="#" class="small-project-img">
+                            <img src="img/portfolio-projects/no.jpg" 
+                            alt="Ne">
+                        </a>
+                        <a href="#">
+                            <h4 class="small-project-title">Верстка "Мир Авто"</h4>
+                        </a>
+                        <p class="small-project-description">
+                            Верстка многостраничного сайта. 
+                        </p>
+                    </div>
+                    <div class="project mix frontend">
+                        <a href="#" class="small-project-img">
+                            <img src="img/portfolio-projects/lemon.jpg" 
+                            alt="Lemons">
+                        </a>
+                        <a href="#">
+                             <h4 class="small-project-title">Верстка "Мир Авто"</h4>
+                        </a>
+                        <p class="small-project-description">
+                            Верстка многостраничного сайта. 
+                        </p>
+                    </div>
 
                </div>
-                <!-- projects-wrapper -->
+                <!-- projects-container-->
             </div>
         </div>
         <div class="work">
 
         </div>
     </main>  
+    <script src="libs/jquery/jquery-3.0.0.min.js"></script>
+    <script src="libs/mixitup3/mixitup.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
