@@ -302,7 +302,8 @@ button {
 }
 .header-content-wrapper {
   display: flex;
-  padding: 50px 0px 240px 0px;
+  padding: 70px 0px 240px 0px;
+  margin-top: -20px;
 }
 .header-content-skills {
   margin-right: 180px;
@@ -414,11 +415,58 @@ button {
   justify-content: space-between;
 }
 .project {
+  width: 365px;
   margin-bottom: 65px;
 }
-.big-project-img {
+.big-project {
+  width: 555px;
+}
+.project-img {
   display: inline-block;
   margin-bottom: 30px;
+  position: relative;
+}
+.project-img:hover:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--basic);
+  opacity: 0.7;
+}
+.project-img:hover:after {
+  content: "Смотреть проект";
+  display: inline-block;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  font-size: 22px;
+  color: var(--red);
+  font-weight: 800;
+  height: 55px;
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 55px;
+  border-radius: 55px;
+  border: none;
+  transition: background-color 0.2s ease-in;
+  box-shadow: 0px 8px 20px 0px rgba(122, 116, 89, 0.35);
+}
+.project-img:hover:after:hover {
+  background-color: var(--red);
+  color: #ffffff;
+}
+.project-img:hover:after:active {
+  background-color: #d4423b;
+}
+.project-img:hover:after:focus {
+  border: 1px dotted var(--red);
 }
 .big-project-title {
   margin-bottom: 10px;
@@ -427,10 +475,6 @@ button {
 }
 .big-project-description {
   font-size: 22px;
-}
-.small-project-img {
-  display: inline-block;
-  margin-bottom: 30px;
   font-weight: 300;
 }
 .small-project-title {
