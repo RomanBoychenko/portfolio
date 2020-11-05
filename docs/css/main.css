@@ -423,11 +423,13 @@ button {
   width: 555px;
 }
 .project-img {
-  display: inline-block;
-  margin-bottom: 30px;
   position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
 }
-.project-img:hover:before {
+.project-img:before {
   content: "";
   display: block;
   position: absolute;
@@ -436,17 +438,28 @@ button {
   width: 100%;
   height: 100%;
   background-color: var(--basic);
+  opacity: 0;
+  z-index: 2;
+  transition: 0.6s;
+}
+.project-img:hover .project-button {
+  transform: translate(-50%, -50%);
+}
+.project-img:hover .project-button-small {
+  transform: translate(-21%, -50%);
+}
+.project-img:hover:before {
   opacity: 0.7;
 }
-.project-img:hover:after {
-  content: "Смотреть проект";
-  display: inline-block;
-  z-index: 2;
+.project-button {
+  overflow: hidden;
+  z-index: 3;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -500%);
   background-color: #ffffff;
+  font-family: 'M PLUS 1p';
   font-size: 22px;
   color: var(--red);
   font-weight: 800;
@@ -456,23 +469,37 @@ button {
   line-height: 55px;
   border-radius: 55px;
   border: none;
-  transition: background-color 0.2s ease-in;
+  transition: 0.6s;
   box-shadow: 0px 8px 20px 0px rgba(122, 116, 89, 0.35);
 }
-.project-img:hover:after:hover {
+.project-button:hover {
+  transition: 0.6s;
   background-color: var(--red);
   color: #ffffff;
 }
-.project-img:hover:after:active {
+.project-button:active {
   background-color: #d4423b;
 }
-.project-img:hover:after:focus {
+.project-button:focus {
   border: 1px dotted var(--red);
+}
+.project-button-small {
+  overflow: hidden;
+  left: 29%;
+  transition: 0.6s;
+  transform: translate(-21%, -500%);
 }
 .big-project-title {
   margin-bottom: 10px;
   font-size: 32px;
   font-weight: 700;
+  transition: color 0.3s, border-bottom 0.05s;
+}
+.big-project-title:hover,
+.big-project-title:active {
+  color: var(--red);
+  border-bottom: 2px solid var(--red);
+  width: fit-content;
 }
 .big-project-description {
   font-size: 22px;
@@ -482,6 +509,13 @@ button {
   margin-bottom: 5px;
   font-size: 26px;
   font-weight: 700;
+  transition: color 0.3s, border-bottom 0.05s;
+}
+.small-project-title:hover,
+.small-project-title:active {
+  color: var(--red);
+  border-bottom: 2px solid var(--red);
+  width: fit-content;
 }
 .small-project-description {
   font-size: 20px;
