@@ -338,7 +338,7 @@
                     <div class="contacts-title">
                         <h2 class="title-main line-bottom">Контакты</h2>
                     </div>
-                    <!-- contact-content -->
+                    <!-- contact-content-raw -->
                     <div class="contacts-raw">
                         <!-- contacts-content -->
                         <div class="contacts-content-wrapper">
@@ -387,30 +387,54 @@
                         </div>
                         <!-- contacts-content -->
 
-
-
                         <!-- form -->
-                        <div class="form">
+                        <form class="contacts-form" action="">
+                            <input type="hidden" name="project_name" value="portfolio.ru">
+                            <input type="hidden" name="admin_email" value="veronica.ivanova27@gmail.com">
+                            <input type="hidden" name="email_from" value="info@portfolio.ru">
 
-                        </div>
+                            <div class="form-item-wrapper">
+
+                                <div class="form-item">  
+                                    <input type="text" name="email"
+                                    class="form-field">
+                                    <span class="fake-placeholder">Ваш Email</span>
+                                </div>
+
+                                <div class="form-item">       
+                                    <input type="text" name="theme"
+                                    class="form-field theme">
+                                    <span class="fake-placeholder theme">Тема письма</span>
+                                </div>
+
+                                <div class="form-item">   
+                                    <textarea type="text" name="message" class="form-field"></textarea>  
+                                    <span class="fake-placeholder">Сообщение</span>
+                                </div> 
+
+                            </div>
+
+                                <button type="submit" class="button">Отправить</button>
+
+                            </form>
+                            <div id="answer"></div>
                         <!-- /form -->
-                    </div>
-                    <!--/ contact-content -->
 
-    
-    
-    
+                    </div>
+                    <!--/ contact-content-raw -->    
                 </div>
 
             </div>
-
-
-
         </section>
         <!-- /section contacts -->
     </main>  
+
     <script src="libs/jquery/jquery-3.0.0.min.js"></script>
+    <!-- валидация формы -->
+    <script src="libs/jquery.validate/jquery.validate.js"></script>
+    <!-- фильтр проектов -->
     <script src="libs/mixitup3/mixitup.min.js"></script>
+
     <script src="js/main.js"></script>
 </body>
 </html>
