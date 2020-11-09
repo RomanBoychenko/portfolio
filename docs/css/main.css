@@ -716,7 +716,6 @@ button {
 }
 .contacts-raw {
   display: flex;
-  flex-wrap: wrap;
   position: relative;
   justify-content: space-between;
 }
