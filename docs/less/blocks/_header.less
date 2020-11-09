@@ -2,7 +2,7 @@
     max-width: 1600px;
     margin: 0 auto;
 
-    padding-top: 70px;
+    padding-top: 61px;
     background-image: url(../img/bg/line.jpg);
     background-size: auto;
     background-position: center;
@@ -13,7 +13,7 @@
 .header-nav-wrapper {
     margin: 0 auto;
     max-width: 1400px;
-    padding: 0 15px;
+    padding: 0 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,11 +26,8 @@
     }
 }
 
-.header-nav {
-    
-}
 .nav-link {
-    margin-right: 80px;
+    margin-right: 70px;
     font-size: 20px;
     font-weight: 700;
     
@@ -40,13 +37,12 @@
 
     &:focus {
         border: 1px dotted var(--red);
+        outline: none;
     }
 }
 
-
 .header-nav-icons {
     display: flex;
-
 }
 .nav-icon {
     display: inline-block;
@@ -57,26 +53,31 @@
     }
     &:focus {
         border: 1px dotted var(--red);
+        outline: none;
     }
 }
 .nav-icon svg {
-    width: 25px;
+    width: 28px;
+    transition: 0.2s;
 }
-.color-linkedin svg {
+.linkedin svg {
     &:hover, &:active {
         fill: #0077b5;
     }
 }
-.color-github svg{
+.github svg{
     &:hover, &:active {
         fill: #6cc644;
     }
 }
-.color_vk svg{
+.vk svg{
+    width: 34px;
     &:hover, &:active {
         fill: #4d76a1;
     }
 }
+
+// Если подключаем, через сайт
 // .color-linkedin {
 //     &:hover, &:active {
 //         color: #0077b5;
@@ -96,16 +97,19 @@
 .header-container {
     display: flex;
     flex-direction: row-reverse;
-    padding-top: 150px;
+    padding-top: 146px;
     padding-bottom: 80px;
 }
 .header-content {
     width: 50%;
 }
 .header-img-wrapper {
-    margin-left: 125px;
+    margin-top: 27px;
     position: relative;
     z-index: 2;
+}
+.header-img-wrapper img{
+    margin-left: auto;
 }
 .header-img-wrapper::before {
     content: "";
@@ -120,14 +124,14 @@
 }
 
 .title-name {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-size: 90px;
-    line-height: 1;
+    line-height: 1.2;
     font-weight: 800;
 }
 
 .header-content-text {
-    margin-bottom: 40px;
+    margin-bottom: 34px;
     line-height: 1.5;
     font-weight: 500;
     color: #393f47;
@@ -136,32 +140,37 @@
     position: relative;
 }
 .bg-header {
-    margin-top: -240px;
+    margin-top: -250px;
     z-index: -2;
 }
 
 .header-content-wrapper{
     display: flex;
-    padding: 70px 0px 240px 0px;
-    margin-top: -20px;
+    padding: 70px 0px 243px 0px;
+    margin-top: -79px;
 }
 
 .header-content-skills {
     margin-right: 180px;
 }
 .header-content-title {
-    margin-bottom: 35px;
+    margin-bottom: 27px;
 }
 .skills {
-    margin-bottom: 60px;
+    margin-bottom: 39px;
+}
+.skills li {
+    margin-bottom: 3px;
 }
 .skills li:before {
     content: "— ";
 }
 .header-icon-connect {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
-
+.header-content-connect .header-content-title {
+    margin-bottom: 35px;
+}
 
 .mail-connect {
     border-bottom: 1px solid #000;
