@@ -78,7 +78,23 @@ button {
     cursor: pointer;
     padding: 0;
 }
-
+.noscroll {
+    overflow: hidden;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0, .5);
+    z-index: 4;
+    display: none;      
+    
+}
+#overlay.active {
+    display: block;
+}
 .container {
     max-width: 1140px;
     margin-left: auto;
@@ -283,7 +299,7 @@ button {
     background-color: #89b4cb;
     border-radius: 50%;
     margin-bottom: 15px;
-    transition: .3s;
+    transition: .2s;
 }
 
 #page-nav li a {

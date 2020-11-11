@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <div id="overlay"></div>
     <ul id="page-nav">
         <li class="active">
             <a href="#header"></a>
@@ -27,14 +28,40 @@
     <header id="header" class="header">
         <!-- header-navigation -->
         <div class="header-nav-wrapper">
+            <!-- лого -->
             <div class="header-logo line-bottom">
                 <a href="#">ИВ</a>
             </div>
+            <!-- меню -->
             <nav class="header-nav">
                 <a href="#" class="nav-link animate-border">Главная</a>
                 <a href="#portfolio" class="nav-link animate-border">Работы</a>
                 <a href="#contacts" class="nav-link animate-border">Контакты</a>          
+                <div class="mobile-contacts">
+                    <div class="icons-connect">
+                        <a href="#" class="color-git icons-connect-icon">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a  href="#" class="color-telegramm icons-connect-icon">
+                                <i class="fab fa-telegram fa-2x"></i>
+                        </a>
+                        <a  href="#" class="circle-vk icons-connect-icon">
+                            <i class="fab fa-vk fa-inverse"></i>
+                        </a>
+                        <a  href="#" class="color-facebook icons-connect-icon">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                    </div>
+                
+
+                    <div>
+                        <a href="mailto:ivanova.veronica27@gmail.com" class="mail-connect">ivanova.veronica27@gmail.com</a>
+                    </div>
+                </div>
+
+                          
             </nav>
+            <!-- соц. иконки -->
             <div class="header-nav-icons">
                 <a href="#" class="nav-icon linkedin">
                     <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -59,6 +86,11 @@
                     <!-- <i class="fab fa-vk"></i> -->
                 </a>
             </div> 
+
+            <!-- иконка гамбургер -->
+            <div class="toggle-menu">
+                <span></span>
+            </div>
         </div>
         <!-- / header-navigation -->
         
@@ -344,7 +376,7 @@
                     <div class="contacts-title">
                         <h2 class="title-main line-bottom">Контакты</h2>
                     </div>
-                    <!-- contact-content-raw -->
+                    <!-- contact-raw -->
                     <div class="contacts-raw">
                         <!-- contacts-content -->
                         <div class="contacts-content-wrapper">
@@ -354,24 +386,24 @@
                             </p>
 
                             <!-- contacts-connect-container -->
-                            <div class="contacts-connect-container">
-                                <div class="contacts-connect-wrapper">
+                            <ul class="contacts-connect-container">
+                                <li class="contacts-connect-wrapper">
                                     <span class="contacts-connect">Email</span>
                                     <a href="mailto:ivanova.veronica27@gmail.com" class="contacts-connect-mail">ivanova.veronica27@gmail.com</a>
-                                </div>
-                                <div class="contacts-connect-wrapper">
+                                </li>
+                                <li class="contacts-connect-wrapper">
                                     <span class="contacts-connect">Skype</span>
                                     <a href="skype:ivanova.veronica?call" class="contacts-connect-mail">ivanova.veronica</a>
-                                </div>
-                                <div class="contacts-connect-wrapper">
+                                </li>
+                                <li class="contacts-connect-wrapper">
                                     <span class="contacts-connect">Телефон</span>
                                     <a href="tel: +7 (980) 123-45-67" class="contacts-connect-address">+7 (980) 123-45-67</a>
-                                </div>
-                                <div class="contacts-connect-wrapper">
+                                </li>
+                                <li class="contacts-connect-wrapper">
                                     <span class="contacts-connect">Адрес</span>
                                     <a href="https://www.google.ru/maps/place/%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3/@59.9356213,30.2663102,12.43z/data=!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9310584!4d30.3609097?hl=ru" target="_blank" class="contacts-connect-address">Россия, Санкт-Петербург</a>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                             <!-- contacts-connect-container -->
 
                             <!-- icon-connect -->
@@ -395,38 +427,43 @@
                         <!-- contacts-content -->
 
                         <!-- form -->
-                        <form class="contacts-form" action="">
-                            <input type="hidden" name="project_name" value="portfolio.ru">
-                            <input type="hidden" name="admin_email" value="veronica.ivanova27@gmail.com">
-                            <input type="hidden" name="email_from" value="info@portfolio.ru">
+                        <div class="form-wrapper">
 
-                            <div class="form-item-wrapper">
-                                <div class="form-item">  
-                                    <input type="text" name="email"
-                                    class="form-field">
-                                    <span class="fake-placeholder">Ваш Email</span>
+                            <form class="contacts-form" action="">
+                                <input type="hidden" name="project_name" value="portfolio.ru">
+                                <input type="hidden" name="admin_email" value="veronica.ivanova27@gmail.com">
+                                <input type="hidden" name="email_from" value="info@portfolio.ru">
+
+                                <div class="form-item-wrapper">
+                                    <div class="form-item">  
+                                        <input type="text" name="email"
+                                        class="form-field">
+                                        <span class="fake-placeholder">Ваш Email</span>
+                                    </div>
+
+                                    <div class="form-item">       
+                                        <input type="text" name="theme"
+                                        class="form-field theme">
+                                        <span class="fake-placeholder theme">Тема письма</span>
+                                    </div>
+
+                                    <div class="form-item">   
+                                        <textarea type="text" name="message" class="form-field"></textarea>  
+                                        <span class="fake-placeholder">Сообщение</span>
+                                    </div> 
                                 </div>
 
-                                <div class="form-item">       
-                                    <input type="text" name="theme"
-                                    class="form-field theme">
-                                    <span class="fake-placeholder theme">Тема письма</span>
-                                </div>
-
-                                <div class="form-item">   
-                                    <textarea type="text" name="message" class="form-field"></textarea>  
-                                    <span class="fake-placeholder">Сообщение</span>
-                                </div> 
-                            </div>
-
-                            <button type="submit" class="button">Отправить</button>
+                                <button type="submit" class="button">Отправить</button>
 
                             </form>
+
                             <div id="answer"></div>
+
+                        </div>
                         <!-- /form -->
 
                     </div>
-                    <!--/ contact-content-raw -->    
+                    <!--/ contact-raw -->    
                 </div>
             </div>
         </section>

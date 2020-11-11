@@ -1,4 +1,47 @@
 $(document).ready(function () {
+    // MOBILE-MENU
+    const menuToggle = document.querySelector('.toggle-menu');
+    const mobMenu = document.querySelector('.header-nav');
+    const overlayEl = document.querySelector('#overlay');
+    const bodyEl = document.body;
+
+    // клик по иконке гамбургер
+    menuToggle.addEventListener('click', function(){
+        this.classList.toggle('active');
+        mobMenu.classList.toggle('active');
+        overlayEl.classList.toggle('active');
+        bodyEl.classList.toggle('noscroll');
+    });
+
+    // клик по мобильному меню (закрываем)
+    mobMenu.addEventListener('click', function(){
+        this.classList.remove('active');
+        menuToggle.classList.remove('active');
+        overlayEl.classList.remove('active');
+        bodyEl.classList.remove('noscroll');
+    });
+
+    // закрытие мобильного меню по клику по оверлею 
+    overlayEl.addEventListener('click', function(){
+        this.classList.remove('active');
+        menuToggle.classList.remove('active');
+        mobMenu.classList.remove('active');
+        bodyEl.classList.remove('noscroll');
+    });
+
+    // закрытие MobMenu при resize экрана
+    window.addEventListener('resize', function(){
+        mobMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        overlayEl.classList.remove('active');
+        bodyEl.classList.remove('noscroll');
+    });
+
+
+
+
+
+
         //NAVE-PAGE
     $('#page-nav').onePageNav({
         currentClass: 'active',
@@ -13,18 +56,14 @@ $(document).ready(function () {
 
     });
 
-
-
-
-
     // FILTER PORTFOLIO
     let containerEl = document.querySelector('#projects-container');
     let mixer = mixitup(containerEl, {
         classNames: {
             block: ""
         }
-});
-})
+    });
+
 
 //FORM PLACEHOLDER
 const formInputs = document.querySelectorAll('.form-field');
@@ -93,6 +132,6 @@ function ajaxFormSubmit() {
     //Чтобы по Submit больше ничего не выполнялось - делаем возврат false, чтобы прервать
     return false;
 }
-
+})
 
     
