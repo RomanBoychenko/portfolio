@@ -1,16 +1,43 @@
 .footer {
     background-color: #333333;
+    padding: 34px 0;
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
     padding: 27px 0;
+
+	}
 }
 
 .footer-name {
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     color: #fff;
+
+}
+
+.footer-name h5 {
+    font-size: 18px;
+    	// Для десктопов
+	@media (min-width: 1200px) {
+        font-size: 20px;
+	}
+
 }
 
 .footer-desc {
     font-size: 16px;
     color: #b0b0b0;
+}
+.footer-desc a{
+    display: inline-block;
+    color: #b0b0b0;
+    border-bottom: 1px solid #b0b0b0;
+    &:hover {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    }
 }

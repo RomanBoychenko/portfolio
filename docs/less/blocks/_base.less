@@ -23,8 +23,14 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'M PLUS 1p';
-    font-size: 24px;
+    font-size: 18px;
     color: #000;
+    
+    // Для десктопов
+    @media (min-width: 1200px) {
+        font-size: 24px;
+    }
+
 }
 
 a, a:hover {
@@ -127,38 +133,59 @@ button {
     background-color: var(--line);
     border-radius: 5px;
     z-index: -1;
+    transition: 0.5s;
 }
 
 .title-name .line-bottom:after {
-    bottom: 25px;
+    bottom: 5px; 
+    // Для планшетов и выше
+    @media (min-width: 768px) {
+        bottom: 8px;
+    }
+    // Для десктопов
+    @media (min-width: 1200px) {
+        bottom: 15px;
+    }
+
 }
 // .line-bottom:
 .title-main:after {  
-    bottom: 20px;
+    bottom: 11px;
+    // Для планшетов и выше
+    @media (min-width: 768px) {
+        bottom: 16px;
+        }
+    // Для десктопов
+    @media (min-width: 1200px) {
+        bottom: 19px;
+    }
 }
 .animate-border {
-    position: relative;
-    width: fit-content;
-    z-index: 2; 
+    // Для десктопов
+    @media (min-width: 1200px) {   
+        position: relative;
+        width: fit-content;
+        z-index: 2; 
 
-    &:before,
-    &:after {
-        content:"";
-        position: absolute;
-        bottom: 3px;
-        width: 0;
-        height: 4px;
-        background-color: var(--line);
-        border-radius: 2px;
-        transition: .5s;
-        z-index: -1;
-    }
+        &:before,
+        &:after {
+            content:"";
+            position: absolute;
+            bottom: 3px;
+            width: 0;
+            height: 4px;
+            background-color: var(--line);
+            border-radius: 2px;
+            transition: .5s;
+            z-index: -1;
+        }
 
-    &:before {
-        left: 50%;
-    }
-    &:after {
-        right: 50%;
+        &:before {
+            left: 50%;
+        }
+        &:after {
+            right: 50%;
+        }
     }
 }
 
@@ -224,15 +251,33 @@ button {
 }
 
 .title-medium {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 800;
     letter-spacing: 1;
+    
+    // Для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 30px;      
+    }
+    // Для десктопов
+    @media (min-width: 1200px) {
+        font-size: 40px;
+    }
 }
 
 .title-main {
-    font-size: 64px;
+    font-size: 42px;
     font-weight: 800;
     letter-spacing: 1;
+
+    // Для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+    // Для десктопов
+    @media (min-width: 1200px) {
+        font-size: 64px;
+    }
 }
 
 .icons-connect {
@@ -291,6 +336,12 @@ button {
     right: 50px;
     top: 50%;
     z-index: 100;
+    display: none;
+
+    // Для десктопов
+     @media (min-width: 1200px) {
+         display: block;
+    }
 }
 
 #page-nav li {
@@ -309,4 +360,33 @@ button {
 
 #page-nav li.active {
     background-color: var(--red);
+}
+
+.mobile-link {
+    display: block;
+    font-size: 20px;
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+    width: fit-content;
+    &:hover {
+        color: var(--red);
+        border-bottom: 1px solid var(--red);
+        
+    }
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+        display: none;
+	}
+
+}
+
+.uppercase {
+    text-transform: uppercase;
+	// Для десктопов
+	@media (min-width: 1200px) {
+        text-transform: unset;
+	}
 }

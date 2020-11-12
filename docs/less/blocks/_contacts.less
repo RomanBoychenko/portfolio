@@ -1,21 +1,45 @@
 .contacts {
     background-color: #f4f8f9;
 }
-.contacts-container{
-    max-width: 1600px;
+.contacts-container{ 
     margin: 0 auto;
 
-    padding-top: 128px;
-    padding-bottom: 149px;
+    padding-top: 43px;
+    padding-bottom: 60px;
+    background-color: #f4f8f9;
 
-    background-image: url(../img/bg/contact-line.jpg);
-    background-size: auto;
-    background-position: center;
-    background-repeat: repeat-y;
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        padding-top: 73px;
+        padding-bottom: 90px;
+   	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+        max-width: 1600px;
+        padding-top: 128px;
+        padding-bottom: 149px;
+    
+        background-image: url(../img/bg/contact-line.jpg);
+        background-size: auto;
+        background-position: center;
+        background-repeat: repeat-y;
+	}
+
+    
    
 }
 .contacts-title {
+    margin-bottom: 39px;
+
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+    margin-bottom: 50px;
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
     margin-bottom: 57px;
+
+	}
 }
 .contacts-title .title-main{
     margin: 0 auto;
@@ -25,10 +49,24 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+        justify-content: space-between;
+	}
 }
 
 .contacts-raw::before{
+	// Для десктопов
+	@media (min-width: 1200px) {
     content: "";
     position: absolute;
     top: -4px;
@@ -36,72 +74,164 @@
     width: 448px;
     height: 280px;
     background-image: url(../img/bg/contacts-bg-dots.png);
+    z-index: -1;
+    }
 
 }
 
 .contacts-content-wrapper{
-    max-width: 520px;
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        max-width: 330px;
+        margin-right: 35px;
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+        max-width: 520px;
+        margin-right: 0;
+	}
 }
 .contacts-desc {
-    margin-top: 23px;
-    margin-bottom: 39px;
-   
-    font-size: 20px;
-    line-height: 1.6;
+    margin-bottom: 21px;
+    font-size: 16px;
+    line-height: 1.63;
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        margin-bottom: 35px;
+        font-size: 18px;
+        line-height: 1.55;
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+        margin-top: 23px;
+        margin-bottom: 39px;
+       
+        font-size: 20px;
+        line-height: 1.6;
+	}
 }
 .contacts-connect-container {
-    margin-bottom: 45px;
+        margin-bottom: 32px;
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        margin-bottom: 35px;
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+        margin-bottom: 45px;
+	}
+    
 }
 .contacts-connect-container li {
-    margin-bottom: 16px;
+    margin-bottom: 11px;
     &:last-child {
         margin-bottom: 0;
     }
-}
-.contacts-connect-wrapper {
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        margin-bottom: 16px;
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+        margin-bottom: 16px;
 
+	}
 }
 
 .contacts-connect {
-    display: inline-block;
-    margin-right: 89px;
-    min-width: 100px;
-    font-size: 20px;
+    display: block;
+    font-size: 18px;
     font-weight: 700;
+	// Для десктопов
+	@media (min-width: 1200px) {
+        display: inline-block;
+        margin-right: 89px;
+        min-width: 100px;
+        font-size: 20px;
+        font-weight: 700;
+	}
 }
 .contacts-connect-mail{
     color: var(--blue);
     font-weight: 500;
-    font-size: 20px;
-    
+    font-size: 18px;
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {    
+        font-size: 20px;
+    }
 }
 .contacts-connect-address {
     color: #96969d;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     transition: 0.3s;
 
     &:hover {
         color: #47474d;
     }
+    // Для десктопов
+	@media (min-width: 1200px) {    
+        font-size: 20px;
+    }
+}
+.contacts-content-wrapper .icons-connect{
+    margin-bottom: 48px;
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+	}
+}
+.contacts-form {
+    padding: 40px 18px 40px 18px;
+    // width: 290px;
+    max-width: 340px;
+    background-color: #fff;
+    box-shadow: 0px 28px 40px 0px rgba(194, 219, 235, 1);
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        width: 340px;
+        padding: 40px 30px 40px 30px;
+        box-shadow: 0px 28px 80px 0px rgba(194, 219, 235, 1);
+
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+        max-width: unset;
+        width: 512px;
+        padding: 80px 60px 40px 60px;
+        box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
+	}
 }
 
-.contacts-form {
-    padding: 60px 60px 40px 60px;
-    width: 512px;
-    background-color: #fff;
-    box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
-}
+
 .form-item-wrapper {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        margin-bottom: 15px;
+	}
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        margin-bottom: 40px;
+
+	}
 }
 .form-item {
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 
     &:last-child {
         margin-bottom: 0px;
     }
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        margin-bottom: 60px;
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+	}
 }
 
 .form-field {
@@ -116,12 +246,12 @@
     outline: none;
 }
 textarea.form-field {
-    height: 139px;
+    height: 114px;
     resize: none;
 }
 .fake-placeholder {
     position: absolute;
-    top: 20%;
+    top: 0;
     left: 0;
 
     pointer-events: none;
@@ -132,12 +262,7 @@ textarea.form-field {
 
     transition: 0.5s;
 }
-.fake-placeholder.theme {
-    top: 60px;
-}
-.theme {
-    min-height: 100px;
-}
+
 
 .fake-placeholder.active {
     color: #ed9626;
@@ -149,20 +274,65 @@ textarea.form-field {
     left: 0;
 }
 
-.error {
+label.error {
     font-size: 12px;
     color: var(--red);
+}
+
+input.error, 
+textarea.error {
+    border-bottom: 2px solid var(--red);  
 }
 
 .contact-form__success{
     transition: 0.3s;
 
-    width: 512px;
-    height: 545px;
+    width: 290px;
+    height: 460px;
     background-color: #fff;
-    box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
-    font-size: 24px;
-    padding: 100px 0;
+    box-shadow: 0px 28px 40px 0px rgba(194, 219, 235, 1);
+    font-size: 18px;
+    padding: 50px 20px;
     text-align: center;
 
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        font-size: 20px;
+        width: 340px;
+        box-shadow: 0px 28px 80px 0px rgba(194, 219, 235, 1);
+        padding: 50px 20px;
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+        font-size: 24px;
+        width: 512px;
+        height: 545px;
+        box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
+        padding: 100px 20px;
+	}
+}
+
+.form-button {
+    font-size: 20px;
+    height: 54px;
+    line-height: 54px;
+    border-radius: 54px;
+
+    padding-left: 75px;
+    padding-right: 75px;
+
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        padding-left: 85px;
+        padding-right: 85px;
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+        font-size: 20px;
+        height: 64px;
+        line-height: 64px;
+        border-radius: 64px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }
