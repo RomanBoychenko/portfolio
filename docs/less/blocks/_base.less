@@ -285,7 +285,7 @@ button {
 }
 .icons-connect-icon {
     font-size: 26px;
-    margin-right: 30px;
+    margin-right: 18px;
     &:last-child {
         margin-right: 0;
     }
@@ -293,6 +293,13 @@ button {
         border: 1px dotted var(--red);
         outline: none;
     }
+    // Для планшетов и выше
+	@media (min-width: 768px) {
+        margin-right: 30px;
+	}
+	// Для десктопов
+	@media (min-width: 1200px) {
+	}
 }
 .color-git{
     color: #000;

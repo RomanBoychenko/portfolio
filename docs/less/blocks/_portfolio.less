@@ -84,14 +84,19 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    
 
 
     // Для планшетов и выше
     @media (min-width: 768px) {
         flex-direction: row;
+        max-width: 720px;
+        margin-right: auto;
+        margin-left: auto;
     }
     // Для десктопов
     @media (min-width: 1200px) {
+        max-width: unset;
         margin-bottom: 0;
     }
 }
