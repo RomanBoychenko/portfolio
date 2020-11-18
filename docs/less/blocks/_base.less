@@ -87,6 +87,17 @@ button {
 .noscroll {
     overflow: hidden;
 }
+#backTop a {
+    color: var(--red);
+    font-size: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+#backTop a:hover {
+    color: red;
+}
+
 #overlay {
     position: fixed;
     top: 0;
@@ -95,9 +106,9 @@ button {
     right: 0;
     background-color: rgba(0,0,0, .5);
     z-index: 4;
-    display: none;      
-    
+    display: none;        
 }
+
 #overlay.active {
     display: block;
 }
@@ -217,6 +228,34 @@ button {
     &:focus {
         border: 1px dotted var(--red);
         outline: none;
+    }
+}
+.button-animate {
+    position: relative;
+    overflow: hidden;
+}
+.button-animate:after {
+    content: "";
+    width: 20px;
+    height: 200px;
+    background: -o-linear-gradient(227deg, rgba(255, 255, 255, 0.25) 6%, rgba(255, 255, 255, 0.75) 70%);
+    background: linear-gradient(223deg, rgba(255, 255, 255, 0.25) 6%, rgba(255, 255, 255, 0.75) 70%);
+    // background-color: royalblue;
+    position: absolute;
+    left: 0;
+    top: -80px;
+    z-index: 2;
+    transform: rotate(45deg);
+    animation-name: btnAnimate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes btnAnimate {
+    0%{
+        left: -10px;
+    }
+    100% {
+        left: 102%;
     }
 }
 

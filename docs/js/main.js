@@ -132,6 +132,21 @@ function ajaxFormSubmit() {
     //Чтобы по Submit больше ничего не выполнялось - делаем возврат false, чтобы прервать
     return false;
 }
+
+    // BACK TOP BUTTON
+    $('#backTop').hide();
+    $(window).scroll(function () {
+
+        if($(this).scrollTop() > 200){
+            $('#backTop').fadeIn();
+        }
+        else{
+            $('#backTop').fadeOut();
+        }
+    })
+
+
+
 })
 
     

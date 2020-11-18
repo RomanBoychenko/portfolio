@@ -7,6 +7,8 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="fonts/mplus1p/mplus1p.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -39,9 +41,9 @@
                     <a href="https://veronika-portfolio.ru/">ИВ</a>
                 </div>
                 <!-- меню-навигация -->
-                <a href="#header" class="nav-link animate-border">Главная</a>
-                <a href="#portfolio" class="nav-link animate-border">Работы</a>
-                <a href="#contacts" class="nav-link animate-border">Контакты</a>          
+                <a href="#header" class="nav-link animate-border" data-aos="zoom-in" data-aos-duration="500">Главная</a>
+                <a href="#portfolio" class="nav-link animate-border" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">Работы</a>
+                <a href="#contacts" class="nav-link animate-border" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="500">Контакты</a>          
                 <!-- меню-иконки -->
                 <div class="mobile-contacts">
                     <div class="icons-connect">
@@ -103,11 +105,11 @@
         <div class="container">
             <div class="header-container">
 
-                <div class="header-content header-img-wrapper">
+                <div class="header-content header-img-wrapper" data-aos="fade-left" data-aos-duration="1000">
                     <img src="img/my-foto.jpg" alt="my-foto">
                 </div>
 
-                <div class="header-content">
+                <div class="header-content" data-aos="fade-right" data-aos-duration="1000">
                     <h1 class="title-name">
                         <span class="line-bottom">Вероника</span>
                         <span class="line-bottom">Иванова</span>
@@ -116,7 +118,7 @@
                         Верстальщик сайтов, веб-разработчик. Оперативная верстка. Работаю с соблюдением сроков и&nbsp;выполнением&nbsp;ТЗ.
                     </p>
                     <div class="header-content-buttons">
-                        <a href="#skills" class="button">Познакомиться</a>
+                        <a href="#skills" class="button button-animate">Познакомиться</a>
                         <a href="#contacts" class="button-contacts">Контакты</a>
                     </div>    
                 </div>   
@@ -133,7 +135,7 @@
             <div id="skills" class="header-content-wrapper">
 
                 <!-- header-content-skills -->
-                <div class="header-content-skills"> 
+                <div class="header-content-skills" data-aos="zoom-in" data-aos-duration="1000"> 
                         <div class="header-content-title">
                             <h3 class="title-medium">Что я умею:</h3>
                         </div>
@@ -154,7 +156,7 @@
                 <!-- /header-content-skills -->
 
                 <!-- header-content-connect -->
-                <div class="header-content-connect">
+                <div class="header-content-connect" data-aos="zoom-in" data-aos-duration="1000">
 
                     <div class="header-content-title">
                         <h3 class="title-medium">На связи:</h3>
@@ -201,9 +203,9 @@
 
                 <div class="portfolio-progects">
                     <button class="chosen progect-type control-active" data-filter="all">Все работы</button>
-                    <button class="progect-type" data-filter=".bootstrap">Bootstrap</button>
+                    <!-- <button class="progect-type" data-filter=".bootstrap">Bootstrap</button>
                     <button class="progect-type" data-filter=".wordpress">WordPress</button>
-                    <button class="progect-type" data-filter=".frontend">Frontend</button>
+                    <button class="progect-type" data-filter=".frontend">Frontend</button> -->
                 </div>
 
                 <!-- projects-container-->
@@ -242,25 +244,6 @@
                         </p>
                     </div>
                     <!-- /project -->
-
-                    <!-- project -->
-                    <div class="project mix frontend">
-                        <a href="http://h962716s.beget.tech/adaptive-mobile-first/index.html" target="_blank" class="project-img">
-                            <button class="project-button project-button-small">
-                                Смотреть проект
-                            </button>
-                            <img src="img/portfolio-projects/adaptive.jpg" 
-                            alt="Lemons">
-                        </a>
-                        <a href="http://h962716s.beget.tech/adaptive-mobile-first/index.html" target="_blank">
-                             <h4 class="project-title small-project-title">Верстка "Новости"</h4>
-                        </a>
-                        <p class="project-description small-project-description">
-                            Адаптивная верстка
-                        </p>
-                    </div>
-                    <!-- /project -->
-
                     <!-- project -->
                     <div class="project mix wordpress">
                         <a href="http://h962716s.beget.tech/card-book/index.html"  target="_blank" class="project-img">
@@ -296,10 +279,27 @@
                         </p>
                     </div>
                     <!-- /project -->
+                    <!-- project -->
+                    <div class="project mix frontend">
+                        <a href="http://h962716s.beget.tech/adaptive-mobile-first/index.html" target="_blank" class="project-img">
+                            <button class="project-button project-button-small">
+                                Смотреть проект
+                            </button>
+                            <img src="img/portfolio-projects/adaptive.jpg" 
+                            alt="Lemons">
+                        </a>
+                        <a href="http://h962716s.beget.tech/adaptive-mobile-first/index.html" target="_blank">
+                             <h4 class="project-title small-project-title">Адаптивная верстка</h4>
+                        </a>
+                        <p class="project-description small-project-description">
+                            Адаптивная верстка
+                        </p>
+                    </div>
+                    <!-- /project -->
 
                </div>
                 <!-- projects-container-->
-                <a href="#portfolio" class="mobile-link">Смотреть все работы</a>
+                <!-- <a href="#portfolio" class="mobile-link">Смотреть все работы</a> -->
             </div>
         </section>
         <!-- /section portfolio -->
@@ -490,9 +490,14 @@
                 <p>Веб-разработчик из Санкт-Петербургa, занимаюсь версткой и созданием сайтов.</p>
                 <p>Этот сайт сделан в рамках прохождения обучения по верстке на курсах от <a href="https://webcademy.ru/" target="_blank">WebCademy.ru</a></p>           
             </div>
-            
         </div>
     </footer>
+
+    <!-- icon UP -->
+    <div id="backTop">
+        <a href="#header"><i class="fas fa-angle-double-up"></i></a>
+    </div>   
+    <!-- icon UP -->
 
     <script src="libs/jquery/jquery-3.0.0.min.js"></script>
     <!-- валидация формы -->
@@ -501,6 +506,11 @@
     <script src="libs/mixitup3/mixitup.min.js"></script>
     <!-- боковая навигация -->
     <script src="libs/nav.js/nav.js"></script>
+    <!-- библиотека AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script src="js/main.js"></script>
 </body>
