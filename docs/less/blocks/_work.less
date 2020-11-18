@@ -1,10 +1,8 @@
 .work {
     margin: 0 auto;
-
     padding-top: 49px;
     padding-bottom: 67px;
 
-    // overflow: hidden;
     // Для планшетов и выше
 	@media (min-width: 768px) {
         padding-top: 77px;
@@ -29,8 +27,7 @@
         margin-bottom: 145px;
 	}
 	// Для десктопов
-	@media (min-width: 1200px) {
-        
+	@media (min-width: 1200px) {   
 	}
 }
 
@@ -53,24 +50,17 @@
 
 .work-stage {
     position: relative;
-
-    
-    // min-height: 200px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 100px;
-
     padding-bottom: 63px;
 
     &:last-child {
         padding-bottom: 0px;
-
     }
-
     &:last-child:after {
         display: none;
     }
-
     // Для планшетов и выше
     @media (min-width: 768px) {
 
@@ -78,11 +68,9 @@
         margin-left: 37px;
         padding-right: 115px;
         padding-left: 0;
-
         padding-bottom: 74px;
         min-height: 200px;
 	
-    
         &:nth-child(2n) {
             padding-right: 0;
             padding-left: 115px;
@@ -95,8 +83,7 @@
         }
         &:nth-child(2n) .stage-icon {
             right: unset;
-            left: 0;
-         
+            left: 0; 
         }
         &:nth-child(2n) .stage-text {
             padding-right: 0;
@@ -106,9 +93,6 @@
             margin-left: 0;
             margin-right: auto;
         }
-
-
-
         &:first-child:before {
             content:"";
             position: absolute;
@@ -183,7 +167,6 @@
         text-align: right; 
         &:last-child {
             padding-bottom: 0;
-
         }
 	}
 	// Для десктопов
@@ -192,8 +175,7 @@
     
 }
 
-.title-stage {
-    
+.title-stage {  
     font-size: 20px;
     font-weight: 800;
     margin-bottom: 10px;
@@ -203,7 +185,6 @@
         margin-left: auto;
         font-size: 24px;
         margin-bottom: 12px;
-
 	}
 	// Для десктопов
 	@media (min-width: 1200px) {
@@ -237,12 +218,6 @@
 }
 .stage-text .line-bottom:after {
     bottom: -1px;
-    // Для планшетов и выше
-	@media (min-width: 768px) {
-	}
-	// Для десктопов
-	@media (min-width: 1200px) {
-	}
 }
 .stage-text .line-bottom{ 
 	// Для десктопов
@@ -251,7 +226,6 @@
             background-color: var(--red);
         }
 	}
-
 }
 .stage-text .line-bottom {
     &:after{

@@ -42,8 +42,8 @@
                 </div>
                 <!-- меню-навигация -->
                 <a href="#header" class="nav-link animate-border" data-aos="zoom-in" data-aos-duration="500">Главная</a>
-                <a href="#portfolio" class="nav-link animate-border" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">Работы</a>
-                <a href="#contacts" class="nav-link animate-border" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="500">Контакты</a>          
+                <a href="#portfolio" class="nav-link animate-border" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="700">Работы</a>
+                <a href="#contacts" class="nav-link animate-border" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">Контакты</a>          
                 <!-- меню-иконки -->
                 <div class="mobile-contacts">
                     <div class="icons-connect">
@@ -61,13 +61,11 @@
                         </a>
                     </div>
                 
-
                     <div>
                         <a href="mailto:ivanova.veronica27@gmail.com" class="mail-connect">ivanova.veronica27@gmail.com</a>
                     </div>
                 </div>
-
-                          
+              
             </nav>
             <!-- соц. иконки -->
             <div class="header-nav-icons">
@@ -150,8 +148,8 @@
                             <a href="#portfolio" class="button">Смотреть работы</a>
                             <a href="documents/Резюме.pdf" class="button-contacts">Смотреть резюме</a>
     
-                        </div>                                        
- 
+                        </div>
+
                 </div>
                 <!-- /header-content-skills -->
 
@@ -182,9 +180,6 @@
                         <a href="mailto:ivanova.veronica27@gmail.com" class="mail-connect">ivanova.veronica27@gmail.com</a>
                     </div>
 
-
-                    
-
                 </div>
                 <!-- /header-content-connect -->
 
@@ -202,6 +197,7 @@
                 </a>
 
                 <div class="portfolio-progects">
+                    <!-- карусель -->
                     <button class="chosen progect-type control-active" data-filter="all">Все работы</button>
                     <!-- <button class="progect-type" data-filter=".bootstrap">Bootstrap</button>
                     <button class="progect-type" data-filter=".wordpress">WordPress</button>
@@ -439,7 +435,7 @@
                         <!-- contacts-content -->
 
                         <!-- form -->
-                        <div class="form-wrapper">
+                        <div class="form-wrapper" data-aos="zoom-in" data-aos-duration="1500">
 
                             <form class="contacts-form" action="">
                                 <input type="hidden" name="project_name" value="portfolio.ru">
@@ -452,6 +448,12 @@
                                         class="form-field">
                                         <span class="fake-placeholder">Ваш Email</span>
                                     </div>
+                                    <!-- phone with mask -->
+                                    <!-- <div class="form-item">  
+                                        <input type="text" name="phone"
+                                        class="form-field phone">
+                                        <span class="fake-placeholder">Ваш телефон</span>
+                                    </div> -->
 
                                     <div class="form-item">       
                                         <input type="text" name="theme"
@@ -499,6 +501,7 @@
     </div>   
     <!-- icon UP -->
 
+    <!-- библиотека jquery -->
     <script src="libs/jquery/jquery-3.0.0.min.js"></script>
     <!-- валидация формы -->
     <script src="libs/jquery.validate/jquery.validate.js"></script>
@@ -506,11 +509,13 @@
     <script src="libs/mixitup3/mixitup.min.js"></script>
     <!-- боковая навигация -->
     <script src="libs/nav.js/nav.js"></script>
-    <!-- библиотека AOS-->
+    <!-- библиотека AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <!-- валидация поля телефона маска -->
+    <script src="libs/jquery.maskedinput.min.js/jquery.maskedinput.min.js"></script>
 
     <script src="js/main.js"></script>
 </body>
