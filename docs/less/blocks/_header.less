@@ -33,7 +33,7 @@
         padding-left: 35px;
     }
     // Для десктопов
-    @media (min-width: 1200px) {
+    @media (min-width: 1440px) {
         max-width: 1400px;
         padding: 0 0px;
     }
@@ -271,18 +271,21 @@
 .header-img-wrapper {  
     position: relative;
     z-index: 2;
-    padding: 0 0px;
     margin-bottom: 50px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
 
     border-radius: 50px;
     overflow: hidden;   
     box-shadow: 0px 6px 20px rgb(71, 64, 27);
+    
 
     // Для планшетов и выше
     @media (min-width: 768px) {
-        // padding: 0 30px;
+
         margin-bottom: 0;
-        width: 40%;
+        // width: 40%;
     }
     // Для десктопов
     @media (min-width: 1200px) {

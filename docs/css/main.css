@@ -433,7 +433,7 @@ button {
     padding-left: 35px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .header-nav-wrapper {
     max-width: 1400px;
     padding: 0 0px;
@@ -642,8 +642,10 @@ button {
 .header-img-wrapper {
   position: relative;
   z-index: 2;
-  padding: 0 0px;
   margin-bottom: 50px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 50px;
   overflow: hidden;
   box-shadow: 0px 6px 20px #47401b;
@@ -651,7 +653,6 @@ button {
 @media (min-width: 768px) {
   .header-img-wrapper {
     margin-bottom: 0;
-    width: 40%;
   }
 }
 @media (min-width: 1200px) {
@@ -1014,10 +1015,11 @@ button {
   position: relative;
   margin-bottom: 25px;
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0px 4px 20px #47401b;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(71, 64, 27, 0.5);
   display: inline-block;
   vertical-align: top;
+  transition: .2s;
 }
 .project-img:before {
   content: "";
@@ -1032,9 +1034,14 @@ button {
   z-index: 2;
   transition: 0.6s;
 }
+.project-img:hover {
+  box-shadow: 0px 4px 20px rgba(71, 64, 27, 0.9);
+  transform: translateY(-4px);
+}
 @media (min-width: 1200px) {
   .project-img {
     margin-bottom: 30px;
+    border-radius: 20px;
   }
 }
 .project-img:hover .project-button {
@@ -1702,3 +1709,4 @@ textarea.error {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
+/*# sourceMappingURL=main.css.map */
